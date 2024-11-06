@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOON May</title>
+    <style>
+        /* 라이트 모드 (기본) */
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --header-bg: #4CAF50;
+            --header-text: white;
+            --nav-bg: #4CAF50;
+            --nav-text: #fff;
+            --nav-hover: #45a049;
+            --section-bg: white;
+            --section-border: #ddd;
+            --section-title: #4CAF50;
+            --footer-bg: #4CAF50;
+            --footer-text: white;
+        }
+
+        /* 다크 모드 */
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --header-bg: #1e1e1e;
+            --header-text: #e0e0e0;
+            --nav-bg: #252525;
+            --nav-text: #e0e0e0;
+            --nav-hover: #3a3a3a;
+            --section-bg: #1a1a1a;
+            --section-border: #333;
+            --section-title: #4CAF50;
+            --footer-bg: #1e1e1e;
+            --footer-text: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        title {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: var(--nav-bg);
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: var(--nav-text);
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--nav-hover);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        section {
+            background-color: var(--section-bg);
+            border: 1px solid var(--section-border);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: var(--section-title);
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
+        #typing-text::after {
+        content: '|';
+        animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* 다크모드 토글 버튼 스타일 */
+        #darkModeToggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="darkModeToggle">다크모드 전환</button>
+    <header>YOON May</header>
+   
+    <nav>
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#about">소개</a></li>
+            <li><a href="#keyword">키워드</a></li>
+            <li><a href="#study">공부한 내용</a></li>
+            <li><a href="#like">좋아하는 것</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>소개</h2>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjADZv8xfj3z_62ZgRFH6kfwlEAT8pHq3e6ubOQQfCsIcYUPLMEYNqtkk02gnJiNReAj6lQ-WPLnDSJ1mPyM-_y_aCaW14pAAR4k5Wm4IkFM1azyUm1kK5V9o9DPiDmVLYWcYoSqVUxr5mIl9gP1Fdr9bMMnU0eUWS0VNxH4VfclD_ilaKVSwbyTLT7at_v/s1543/%EC%9C%A4%EC%84%A0%EC%A0%951_20241019_113738.jpg" width="240" height="300" alt=""/>
+        <p id="typing-text"></p>
+    </section>
+
+    <section id="youtube">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fxAGHl7bEp0?si=cdTyA4MI2BfQKqVU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="keyword">
+        <h2>키워드</h2>
+        <p>#호기심 #긍정적인 #꼼꼼한</p>
+    </section>
+
+    <section id="study">
+        <h2>현재 공부한 내용</h2>
+        <ul>
+            <li>파이썬 기초</li>
+            <li>객체 지향 문법</li>
+            <li>데이터 전처리</li>
+            <li>데이터 시각화 <a href="https://github.com/YoonMay26/project1" target="_blank">Github 링크</a></li>
+        </ul>
+    </section>
+
+    <section id="like">
+        <h2>좋아하는 것 </h2>
+        <p>야구, 영화, 음악, 무화과, 초여름</p>
+    </section>
+
+    <footer>© All Rights Reserved</footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+        });
+
+        // 페이지 로드 시 다크모드 상태 확인
+        if (localStorage.getItem('darkMode') === 'true') {
+            body.classList.add('dark-mode');
+        }
+
+        // 타이핑 애니메이션
+        const text = "데이터 엔지니어를 꿈꾸는 사람입니다.";
+        const typingText = document.getElementById('typing-text');
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                typingText.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100); // 타이핑 속도 조절 (밀리초)
+            }
+        }
+
+        // 페이지 로드 시 타이핑 애니메이션 시작
+        window.onload = function() {
+            setTimeout(typeWriter, 1000); // 1초 후 타이핑 시작
+        };
+    </script>
+</body>
+</html>
